@@ -97,7 +97,7 @@ export default function HowItWorks() {
       </div>
 
       <div className="mx-auto max-w-5xl px-5 sm:px-8 relative">
-        <ScrollReveal>
+        <ScrollReveal className="pl-[68px] sm:pl-[88px] lg:pl-0">
           <p className="text-[10px] sm:text-[11px] font-semibold tracking-[0.25em] uppercase text-primary mb-4">
             The Process
           </p>
@@ -172,7 +172,7 @@ export default function HowItWorks() {
                       <div
                         className={`absolute inset-0 rounded-full transition-all duration-1000 ${
                           isActive
-                            ? "bg-primary/10 scale-[2] sm:scale-[2.5]"
+                            ? "bg-primary/10 scale-[1.5] sm:scale-[1.8] lg:scale-[2.2]"
                             : "bg-transparent scale-100"
                         }`}
                       />

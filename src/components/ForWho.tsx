@@ -4,7 +4,7 @@ export default function ForWho() {
   return (
     <section id="for-who" className="py-20 sm:py-28 lg:py-36 bg-[#FCFCFC]">
       <div className="mx-auto max-w-5xl px-5 sm:px-8">
-        <ScrollReveal>
+        <ScrollReveal className="pl-7 sm:pl-9 lg:pl-0">
           <p className="text-[10px] sm:text-[11px] font-semibold tracking-[0.25em] uppercase text-primary mb-4">
             Two Sides, One Platform
           </p>
