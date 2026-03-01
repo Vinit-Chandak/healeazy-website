@@ -6,22 +6,24 @@ import SpineArt from "./SpineArt";
 export default function Hero() {
   const [mounted, setMounted] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     setMounted(true);
+    setIsMobile(window.innerWidth < 640);
     const onScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const textParallax = scrollY * 0.3;
-  const badgeParallax = scrollY * 0.15;
+  // Disable parallax on mobile for performance
+  const textParallax = isMobile ? 0 : scrollY * 0.3;
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background spine art — positioned right */}
+      {/* Background spine art — centered on mobile, right on desktop */}
       <div
-        className="absolute right-[-10%] sm:right-[-5%] lg:right-[5%] top-[-5%] w-[80%] sm:w-[60%] lg:w-[45%] h-[110%] opacity-70"
+        className="absolute left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:right-[-5%] lg:right-[5%] top-[-5%] w-[90%] sm:w-[60%] lg:w-[45%] h-[110%] opacity-[0.45] sm:opacity-70"
         aria-hidden="true"
       >
         <SpineArt />
@@ -39,26 +41,6 @@ export default function Hero() {
 
       <div className="relative mx-auto max-w-6xl w-full px-5 sm:px-8 pt-28 sm:pt-36 pb-20 sm:pb-28">
         <div className="max-w-2xl">
-          {/* Badge */}
-          <div
-            className={`transition-all duration-700 delay-100 ${
-              mounted
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-6"
-            }`}
-            style={{ transform: mounted ? `translateY(${-badgeParallax}px)` : undefined }}
-          >
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/15 bg-primary/[0.04] mb-8 sm:mb-10">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-success" />
-              </span>
-              <span className="text-[10px] sm:text-[11px] font-semibold text-primary tracking-wider uppercase">
-                Launching in Hyderabad
-              </span>
-            </div>
-          </div>
-
           {/* Headline — dramatic scale */}
           <div
             className={`transition-all duration-1000 delay-200 ${
@@ -131,7 +113,7 @@ export default function Hero() {
 
           {/* Trust line */}
           <div
-            className={`mt-14 sm:mt-16 flex items-center gap-8 transition-all duration-1000 delay-[800ms] ${
+            className={`mt-10 sm:mt-16 flex flex-wrap items-center gap-5 sm:gap-8 transition-all duration-1000 delay-[800ms] ${
               mounted
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-6"
@@ -142,24 +124,24 @@ export default function Hero() {
                 {[0, 1, 2, 3].map((i) => (
                   <div
                     key={i}
-                    className="w-7 h-7 rounded-full border-2 border-white"
+                    className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-white"
                     style={{
                       background: `hsl(${210 + i * 15}, 60%, ${60 + i * 8}%)`,
                     }}
                   />
                 ))}
               </div>
-              <span className="text-[11px] text-text-muted leading-tight">
+              <span className="text-[10px] sm:text-[11px] text-text-muted leading-tight">
                 Therapists joining
                 <br />
                 the waitlist
               </span>
             </div>
-            <div className="w-px h-8 bg-border" />
-            <div className="text-[11px] text-text-muted">
+            <div className="hidden sm:block w-px h-8 bg-border" />
+            <div className="text-[10px] sm:text-[11px] text-text-muted">
               <span className="text-text font-semibold">Home visits</span>
               <br />
-              across Hyderabad
+              across India
             </div>
           </div>
         </div>

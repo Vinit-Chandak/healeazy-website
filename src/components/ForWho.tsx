@@ -2,7 +2,7 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function ForWho() {
   return (
-    <section id="for-who" className="py-24 sm:py-36 bg-[#FCFCFC]">
+    <section id="for-who" className="py-20 sm:py-28 lg:py-36 bg-[#FCFCFC]">
       <div className="mx-auto max-w-5xl px-5 sm:px-8">
         <ScrollReveal>
           <p className="text-[10px] sm:text-[11px] font-semibold tracking-[0.25em] uppercase text-primary mb-4">
@@ -18,7 +18,7 @@ export default function ForWho() {
         <div className="mt-14 sm:mt-20 grid lg:grid-cols-2 gap-5 sm:gap-6">
           {/* For Patients */}
           <ScrollReveal delay={0} scale>
-            <div className="bento-card p-7 sm:p-9 h-full relative overflow-hidden group">
+            <div className="bento-card bg-white p-7 sm:p-9 h-full relative overflow-hidden group">
               {/* Decorative background number */}
               <span
                 className="absolute -top-4 -right-2 text-[8rem] sm:text-[10rem] font-extrabold text-primary/[0.02] leading-none select-none pointer-events-none"
@@ -87,7 +87,7 @@ export default function ForWho() {
 
           {/* For Physiotherapists */}
           <ScrollReveal delay={150} scale>
-            <div className="bento-card p-7 sm:p-9 h-full relative overflow-hidden bg-dark group">
+            <div className="bento-card p-7 sm:p-9 h-full relative overflow-hidden bg-dark border-white/[0.06] group">
               {/* Decorative background number */}
               <span
                 className="absolute -top-4 -right-2 text-[8rem] sm:text-[10rem] font-extrabold text-white/[0.02] leading-none select-none pointer-events-none"
@@ -132,7 +132,7 @@ export default function ForWho() {
                 </div>
 
                 <a
-                  href="#signup"
+                  href="#signup-physiotherapist"
                   className="inline-flex items-center gap-1.5 mt-8 text-sm font-semibold text-white/80 hover:text-white transition-colors group/link"
                 >
                   I&apos;m a physiotherapist

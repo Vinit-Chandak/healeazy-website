@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import ScrollReveal from "./ScrollReveal";
 
 type Role = "patient" | "physiotherapist";
@@ -10,6 +10,18 @@ export default function SignUpForm() {
   const [email, setEmail] = useState("");
   const [role, setRole] = useState<Role>("patient");
   const [status, setStatus] = useState<Status>("idle");
+
+  useEffect(() => {
+    const handleHash = () => {
+      if (window.location.hash === "#signup-physiotherapist") {
+        setRole("physiotherapist");
+        document.getElementById("signup")?.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+    handleHash();
+    window.addEventListener("hashchange", handleHash);
+    return () => window.removeEventListener("hashchange", handleHash);
+  }, []);
   const [errorMsg, setErrorMsg] = useState("");
 
   const handleSubmit = async (e: FormEvent) => {
@@ -51,7 +63,7 @@ export default function SignUpForm() {
   };
 
   return (
-    <section id="signup" className="py-24 sm:py-36 bg-[#FCFCFC] relative">
+    <section id="signup" className="py-20 sm:py-28 lg:py-36 bg-[#FCFCFC] relative">
       {/* Background decorative text */}
       <div
         className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden"
@@ -62,7 +74,7 @@ export default function SignUpForm() {
         </span>
       </div>
 
-      <div className="relative mx-auto max-w-md px-5 sm:px-8">
+      <div className="relative mx-auto max-w-lg sm:max-w-xl px-5 sm:px-8">
         <ScrollReveal>
           <div className="text-center mb-10 sm:mb-12">
             <p className="text-[10px] sm:text-[11px] font-semibold tracking-[0.25em] uppercase text-primary mb-4">
@@ -72,15 +84,14 @@ export default function SignUpForm() {
               Join the waitlist.
             </h2>
             <p className="mt-3 text-sm text-text-secondary leading-[1.7]">
-              Be the first to know when HealEazy
-              <br className="hidden sm:block" /> launches in Hyderabad.
+              Be the first to know when HealEazy launches.
             </p>
           </div>
         </ScrollReveal>
 
         <ScrollReveal delay={100} scale>
           {status === "success" ? (
-            <div className="bento-card p-8 sm:p-10 text-center">
+            <div className="bento-card bg-white p-8 sm:p-10 md:p-12 text-center">
               <div className="w-12 h-12 rounded-full bg-success/10 flex items-center justify-center mx-auto mb-5">
                 <svg
                   className="w-6 h-6 text-success"
@@ -110,7 +121,7 @@ export default function SignUpForm() {
               </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="bento-card p-7 sm:p-9">
+            <form onSubmit={handleSubmit} className="bento-card bg-white p-7 sm:p-10 md:p-12">
               {/* Email */}
               <div className="mb-5">
                 <label
@@ -126,27 +137,27 @@ export default function SignUpForm() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="you@example.com"
-                  className="w-full px-4 py-3 rounded-xl border border-border bg-surface/50 text-sm text-text placeholder:text-text-muted/60 focus:border-primary focus:bg-white transition-all duration-200 outline-none"
+                  className="w-full px-4 py-3.5 sm:py-3 rounded-xl border border-border bg-surface/50 text-sm text-text placeholder:text-text-muted/60 focus:border-primary focus:bg-white transition-all duration-200 outline-none"
                 />
               </div>
 
               {/* Role */}
-              <div className="mb-7">
-                <p className="block text-[10px] font-semibold text-text-muted mb-3 tracking-[0.15em] uppercase">
+              <div className="mb-8">
+                <p className="block text-[10px] sm:text-[11px] font-semibold text-text-muted mb-3 tracking-[0.15em] uppercase">
                   I am a...
                 </p>
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-2 gap-3 sm:gap-4">
                   <button
                     type="button"
                     onClick={() => setRole("patient")}
-                    className={`relative py-4 px-3 rounded-xl border-2 transition-all duration-300 text-center ${
+                    className={`relative py-5 px-4 rounded-xl border-2 transition-all duration-300 text-center ${
                       role === "patient"
                         ? "border-primary bg-primary/[0.04]"
                         : "border-border hover:border-text-muted/30"
                     }`}
                   >
                     <span
-                      className={`block text-xs font-bold mb-0.5 ${
+                      className={`block text-sm font-bold mb-1 ${
                         role === "patient"
                           ? "text-primary"
                           : "text-text-secondary"
@@ -154,7 +165,7 @@ export default function SignUpForm() {
                     >
                       Patient
                     </span>
-                    <span className="block text-[10px] text-text-muted">
+                    <span className="block text-[11px] text-text-muted">
                       I need physio
                     </span>
                   </button>
@@ -162,14 +173,14 @@ export default function SignUpForm() {
                   <button
                     type="button"
                     onClick={() => setRole("physiotherapist")}
-                    className={`relative py-4 px-3 rounded-xl border-2 transition-all duration-300 text-center ${
+                    className={`relative py-5 px-4 rounded-xl border-2 transition-all duration-300 text-center ${
                       role === "physiotherapist"
                         ? "border-primary bg-primary/[0.04]"
                         : "border-border hover:border-text-muted/30"
                     }`}
                   >
                     <span
-                      className={`block text-xs font-bold mb-0.5 ${
+                      className={`block text-sm font-bold mb-1 ${
                         role === "physiotherapist"
                           ? "text-primary"
                           : "text-text-secondary"
@@ -177,7 +188,7 @@ export default function SignUpForm() {
                     >
                       Therapist
                     </span>
-                    <span className="block text-[10px] text-text-muted">
+                    <span className="block text-[11px] text-text-muted">
                       I provide physio
                     </span>
                   </button>
@@ -193,7 +204,7 @@ export default function SignUpForm() {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="w-full py-3.5 bg-primary text-white font-semibold rounded-full hover:bg-primary-hover transition-all duration-300 hover:shadow-xl hover:shadow-primary/15 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                className="w-full py-4 sm:py-3.5 bg-primary text-white font-semibold rounded-full hover:bg-primary-hover transition-all duration-300 hover:shadow-xl hover:shadow-primary/15 disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-sm"
               >
                 {status === "loading" ? (
                   <span className="flex items-center justify-center gap-2">
