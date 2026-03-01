@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-mono: "JetBrains Mono", monospace;
+  --color-primary: #0066FF;
+  --color-primary-hover: #0052CC;
+  --color-primary-light: #E8F0FE;
+  --color-primary-glow: rgba(0, 102, 255, 0.12);
+  --color-surface: #F6F7F9;
+  --color-dark: #0A0A0B;
+  --color-text: #0A0A0B;
+  --color-text-secondary: #52525B;
+  --color-text-muted: #A1A1AA;
+  --color-border: #E4E4E7;
+  --color-success: #22C55E;
+}
+
+/* ─── BASE ──────────────────────────────────── */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "JetBrains Mono", monospace;
+  background: #FCFCFC;
+  color: #0A0A0B;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #0066FF;
+  color: white;
+}
+
+/* ─── GRAIN TEXTURE OVERLAY ─────────────────── */
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.018;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* ─── ISLAND NAV ────────────────────────────── */
+
+.island-nav {
+  backdrop-filter: blur(24px) saturate(1.8);
+  -webkit-backdrop-filter: blur(24px) saturate(1.8);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.04),
+    0 0 0 0.5px rgba(0, 0, 0, 0.02);
+}
+
+.island-nav.scrolled {
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.06),
+    0 0 0 0.5px rgba(0, 0, 0, 0.04);
+}
+
+/* ─── MARQUEE ───────────────────────────────── */
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee-scroll 30s linear infinite;
+  will-change: transform;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ─── SCROLL REVEAL ─────────────────────────── */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.95) translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* ─── GRADIENT TEXT ─────────────────────────── */
+
+.gradient-text {
+  background: linear-gradient(135deg, #0066FF 0%, #00AAFF 50%, #0066FF 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 6s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ─── BENTO CARD ────────────────────────────── */
+
+.bento-card {
+  background: #FFFFFF;
+  border: 1px solid #E4E4E7;
+  border-radius: 20px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card:hover {
+  border-color: rgba(0, 102, 255, 0.15);
+  box-shadow: 0 8px 40px rgba(0, 102, 255, 0.06);
+  transform: translateY(-2px);
+}
+
+/* ─── WAVE DIVIDER ──────────────────────────── */
+
+.wave-divider {
+  position: relative;
+}
+
+.wave-divider::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z' fill='%23FCFCFC'/%3E%3C/svg%3E") no-repeat;
+  background-size: cover;
+}
+
+/* ─── CUSTOM SCROLLBAR ──────────────────────── */
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #D4D4D8; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #A1A1AA; }
+
+/* ─── FOCUS ─────────────────────────────────── */
+
+:focus-visible {
+  outline: 2px solid #0066FF;
+  outline-offset: 2px;
+}
+
+/* ─── STEP CONNECTOR LINE ───────────────────── */
+
+.step-line {
+  position: absolute;
+  width: 2px;
+  background: linear-gradient(to bottom, #0066FF 0%, transparent 100%);
+  opacity: 0.1;
+}
