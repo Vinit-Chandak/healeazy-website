@@ -98,55 +98,55 @@ function BodyMap({
     >
       {/* ── Human silhouette ── */}
       {/* Head */}
-      <circle cx="200" cy="52" r="30" stroke="#0066FF" strokeWidth="1.5" opacity="0.1" />
+      <circle cx="200" cy="52" r="30" stroke="#43baee" strokeWidth="1.5" opacity="0.1" />
 
       {/* Neck */}
-      <path d="M200 82 V108" stroke="#0066FF" strokeWidth="1.5" opacity="0.08" strokeLinecap="round" />
+      <path d="M200 82 V108" stroke="#43baee" strokeWidth="1.5" opacity="0.08" strokeLinecap="round" />
 
       {/* Shoulders */}
-      <path d="M200 108 C195 116, 168 128, 128 138" stroke="#0066FF" strokeWidth="1.5" opacity="0.08" strokeLinecap="round" />
-      <path d="M200 108 C205 116, 232 128, 272 138" stroke="#0066FF" strokeWidth="1.5" opacity="0.08" strokeLinecap="round" />
+      <path d="M200 108 C195 116, 168 128, 128 138" stroke="#43baee" strokeWidth="1.5" opacity="0.08" strokeLinecap="round" />
+      <path d="M200 108 C205 116, 232 128, 272 138" stroke="#43baee" strokeWidth="1.5" opacity="0.08" strokeLinecap="round" />
 
       {/* Arms */}
-      <path d="M128 138 C118 185, 108 225, 92 270" stroke="#0066FF" strokeWidth="1.2" opacity="0.06" strokeLinecap="round" />
-      <path d="M272 138 C282 185, 292 225, 308 270" stroke="#0066FF" strokeWidth="1.2" opacity="0.06" strokeLinecap="round" />
+      <path d="M128 138 C118 185, 108 225, 92 270" stroke="#43baee" strokeWidth="1.2" opacity="0.06" strokeLinecap="round" />
+      <path d="M272 138 C282 185, 292 225, 308 270" stroke="#43baee" strokeWidth="1.2" opacity="0.06" strokeLinecap="round" />
 
       {/* Hands */}
-      <circle cx="90" cy="275" r="7" stroke="#0066FF" strokeWidth="0.8" opacity="0.04" />
-      <circle cx="310" cy="275" r="7" stroke="#0066FF" strokeWidth="0.8" opacity="0.04" />
+      <circle cx="90" cy="275" r="7" stroke="#43baee" strokeWidth="0.8" opacity="0.04" />
+      <circle cx="310" cy="275" r="7" stroke="#43baee" strokeWidth="0.8" opacity="0.04" />
 
       {/* Torso sides */}
-      <path d="M163 122 C158 195, 156 285, 163 370" stroke="#0066FF" strokeWidth="1.2" opacity="0.08" strokeLinecap="round" />
-      <path d="M237 122 C242 195, 244 285, 237 370" stroke="#0066FF" strokeWidth="1.2" opacity="0.08" strokeLinecap="round" />
+      <path d="M163 122 C158 195, 156 285, 163 370" stroke="#43baee" strokeWidth="1.2" opacity="0.08" strokeLinecap="round" />
+      <path d="M237 122 C242 195, 244 285, 237 370" stroke="#43baee" strokeWidth="1.2" opacity="0.08" strokeLinecap="round" />
 
       {/* Spine */}
-      <path d="M200 108 V370" stroke="#0066FF" strokeWidth="1" opacity="0.04" strokeDasharray="4 8" />
+      <path d="M200 108 V370" stroke="#43baee" strokeWidth="1" opacity="0.04" strokeDasharray="4 8" />
 
       {/* Ribcage hints */}
-      <path d="M200 148 Q176 155, 167 152" stroke="#0066FF" strokeWidth="0.6" opacity="0.035" />
-      <path d="M200 148 Q224 155, 233 152" stroke="#0066FF" strokeWidth="0.6" opacity="0.035" />
-      <path d="M200 172 Q178 178, 170 176" stroke="#0066FF" strokeWidth="0.6" opacity="0.035" />
-      <path d="M200 172 Q222 178, 230 176" stroke="#0066FF" strokeWidth="0.6" opacity="0.035" />
-      <path d="M200 196 Q180 202, 174 199" stroke="#0066FF" strokeWidth="0.6" opacity="0.035" />
-      <path d="M200 196 Q220 202, 226 199" stroke="#0066FF" strokeWidth="0.6" opacity="0.035" />
+      <path d="M200 148 Q176 155, 167 152" stroke="#43baee" strokeWidth="0.6" opacity="0.035" />
+      <path d="M200 148 Q224 155, 233 152" stroke="#43baee" strokeWidth="0.6" opacity="0.035" />
+      <path d="M200 172 Q178 178, 170 176" stroke="#43baee" strokeWidth="0.6" opacity="0.035" />
+      <path d="M200 172 Q222 178, 230 176" stroke="#43baee" strokeWidth="0.6" opacity="0.035" />
+      <path d="M200 196 Q180 202, 174 199" stroke="#43baee" strokeWidth="0.6" opacity="0.035" />
+      <path d="M200 196 Q220 202, 226 199" stroke="#43baee" strokeWidth="0.6" opacity="0.035" />
 
       {/* Core center */}
-      <circle cx="200" cy="270" r="3" fill="#0066FF" opacity="0.06" />
+      <circle cx="200" cy="270" r="3" fill="#43baee" opacity="0.06" />
 
       {/* Pelvis */}
-      <path d="M163 370 C175 392, 195 402, 200 404" stroke="#0066FF" strokeWidth="1.2" opacity="0.07" strokeLinecap="round" />
-      <path d="M237 370 C225 392, 205 402, 200 404" stroke="#0066FF" strokeWidth="1.2" opacity="0.07" strokeLinecap="round" />
+      <path d="M163 370 C175 392, 195 402, 200 404" stroke="#43baee" strokeWidth="1.2" opacity="0.07" strokeLinecap="round" />
+      <path d="M237 370 C225 392, 205 402, 200 404" stroke="#43baee" strokeWidth="1.2" opacity="0.07" strokeLinecap="round" />
 
       {/* Legs */}
-      <path d="M178 395 C175 435, 170 485, 166 535" stroke="#0066FF" strokeWidth="1.2" opacity="0.06" strokeLinecap="round" />
-      <path d="M222 395 C225 435, 230 485, 234 535" stroke="#0066FF" strokeWidth="1.2" opacity="0.06" strokeLinecap="round" />
+      <path d="M178 395 C175 435, 170 485, 166 535" stroke="#43baee" strokeWidth="1.2" opacity="0.06" strokeLinecap="round" />
+      <path d="M222 395 C225 435, 230 485, 234 535" stroke="#43baee" strokeWidth="1.2" opacity="0.06" strokeLinecap="round" />
 
       {/* Knee joints */}
-      <circle cx="168" cy="490" r="4" fill="#0066FF" opacity="0.04" />
-      <circle cx="232" cy="490" r="4" fill="#0066FF" opacity="0.04" />
+      <circle cx="168" cy="490" r="4" fill="#43baee" opacity="0.04" />
+      <circle cx="232" cy="490" r="4" fill="#43baee" opacity="0.04" />
 
       {/* Decorative pulse on core */}
-      <circle cx="200" cy="270" r="12" stroke="#0066FF" strokeWidth="0.5" opacity="0.03">
+      <circle cx="200" cy="270" r="12" stroke="#43baee" strokeWidth="0.5" opacity="0.03">
         <animate attributeName="r" values="12;24;12" dur="5s" repeatCount="indefinite" />
         <animate attributeName="opacity" values="0.03;0;0.03" dur="5s" repeatCount="indefinite" />
       </circle>

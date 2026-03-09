@@ -84,7 +84,7 @@ export default function SignUpForm() {
               Join the waitlist.
             </h2>
             <p className="mt-3 text-sm text-text-secondary leading-[1.7]">
-              Be the first to know when HealEazy launches.
+              Be the first to know when Kyuro launches.
             </p>
           </div>
         </ScrollReveal>
@@ -111,7 +111,7 @@ export default function SignUpForm() {
                 You&apos;re on the list.
               </h3>
               <p className="text-sm text-text-secondary leading-[1.7]">
-                We&apos;ll reach out when HealEazy is ready.
+                We&apos;ll reach out when Kyuro is ready.
               </p>
               <button
                 onClick={() => setStatus("idle")}

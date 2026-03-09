@@ -121,7 +121,7 @@ export default function HowItWorks() {
               {/* Background path (ghost) */}
               <path
                 d="M150 60 C250 60, 350 120, 400 180 S550 300, 650 250 C700 230, 650 380, 400 420 S150 460, 150 530 C150 580, 250 640, 400 640"
-                stroke="#0066FF"
+                stroke="#43baee"
                 strokeWidth="2"
                 opacity="0.04"
                 strokeLinecap="round"
@@ -130,7 +130,7 @@ export default function HowItWorks() {
               <path
                 ref={pathRef}
                 d="M150 60 C250 60, 350 120, 400 180 S550 300, 650 250 C700 230, 650 380, 400 420 S150 460, 150 530 C150 580, 250 640, 400 640"
-                stroke="#0066FF"
+                stroke="#43baee"
                 strokeWidth="2"
                 opacity="0.2"
                 strokeLinecap="round"

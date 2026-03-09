@@ -7,11 +7,11 @@ export default function Footer() {
           <div className="flex items-center gap-2">
             <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center">
               <span className="text-white font-extrabold text-[7px] leading-none">
-                HE
+                K
               </span>
             </div>
             <span className="font-bold text-sm tracking-tight text-text">
-              Heal<span className="text-primary">Eazy</span>
+              Kyuro
             </span>
           </div>
 
@@ -59,7 +59,7 @@ export default function Footer() {
             </svg>
             <span>Hyderabad</span>
             <span className="mx-1.5 text-border">|</span>
-            <span>&copy; {new Date().getFullYear()} HealEazy</span>
+            <span>&copy; {new Date().getFullYear()} Kyuro</span>
           </div>
         </div>
       </div>

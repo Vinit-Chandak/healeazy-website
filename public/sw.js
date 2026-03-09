@@ -1,4 +1,4 @@
-const CACHE_NAME = "healeazy-v2";
+const CACHE_NAME = "kyuro-v1";
 const OFFLINE_URL = "/";
 
 const PRECACHE_ASSETS = ["/", "/manifest.json"];

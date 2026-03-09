@@ -5,7 +5,7 @@ This guide sets up a free, scalable form backend using Google Sheets + Apps Scri
 ## Step 1: Create a Google Sheet
 
 1. Go to [Google Sheets](https://sheets.google.com) and create a new spreadsheet
-2. Name it "HealEazy Waitlist"
+2. Name it "Kyuro Waitlist"
 3. In Row 1, add these headers: `Timestamp | Email | Role`
 4. Note the spreadsheet ID from the URL: `https://docs.google.com/spreadsheets/d/SPREADSHEET_ID/edit`
 
@@ -44,7 +44,7 @@ function doPost(e) {
 1. Click **Deploy > New deployment**
 2. Click the gear icon and select **Web app**
 3. Set:
-   - Description: "HealEazy Waitlist"
+   - Description: "Kyuro Waitlist"
    - Execute as: **Me**
    - Who has access: **Anyone**
 4. Click **Deploy**

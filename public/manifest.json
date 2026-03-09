@@ -1,11 +1,11 @@
 {
-  "name": "HealEazy — Expert Physiotherapy at Your Doorstep",
-  "short_name": "HealEazy",
+  "name": "Kyuro — Expert Physiotherapy at Your Doorstep",
+  "short_name": "Kyuro",
   "description": "Connect with verified physiotherapists who come to you. Launching in Hyderabad.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#2563EB",
+  "theme_color": "#2a9fd4",
   "orientation": "portrait-primary",
   "icons": [
     {

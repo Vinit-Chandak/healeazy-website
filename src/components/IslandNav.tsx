@@ -37,11 +37,11 @@ export default function IslandNav() {
           <a href="#" className="flex items-center gap-2 shrink-0">
             <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
               <span className="text-white font-extrabold text-[8px] leading-none">
-                HE
+                K
               </span>
             </div>
             <span className="font-bold text-sm tracking-tight text-text hidden sm:inline">
-              Heal<span className="text-primary">Eazy</span>
+              Kyuro
             </span>
           </a>
 

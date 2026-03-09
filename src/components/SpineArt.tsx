@@ -34,7 +34,7 @@ export default function SpineArt({ className = "" }: Props) {
         >
           <path
             d="M300 60 C300 100, 315 160, 308 220 S285 320, 300 380 S320 460, 310 520 S280 620, 300 680 S315 760, 300 820"
-            stroke="#0066FF"
+            stroke="#43baee"
             strokeWidth="2.5"
             opacity="0.08"
             strokeLinecap="round"
@@ -51,14 +51,14 @@ export default function SpineArt({ className = "" }: Props) {
                     cx={x}
                     cy={y}
                     r={6}
-                    fill="#0066FF"
+                    fill="#43baee"
                     opacity={0.04 + (i % 3) * 0.01}
                   />
                   <circle
                     cx={x}
                     cy={y}
                     r={2}
-                    fill="#0066FF"
+                    fill="#43baee"
                     opacity="0.1"
                   />
                 </g>
@@ -75,7 +75,7 @@ export default function SpineArt({ className = "" }: Props) {
           {/* Shoulder line */}
           <path
             d="M180 200 Q240 185, 300 195 Q360 185, 420 200"
-            stroke="#0066FF"
+            stroke="#43baee"
             strokeWidth="1.5"
             opacity="0.06"
             strokeLinecap="round"
@@ -83,28 +83,28 @@ export default function SpineArt({ className = "" }: Props) {
           {/* Rib curves - right */}
           <path
             d="M308 240 Q360 228, 400 238"
-            stroke="#0066FF"
+            stroke="#43baee"
             strokeWidth="1"
             opacity="0.04"
             strokeLinecap="round"
           />
           <path
             d="M305 280 Q350 268, 385 278"
-            stroke="#0066FF"
+            stroke="#43baee"
             strokeWidth="1"
             opacity="0.04"
             strokeLinecap="round"
           />
           <path
             d="M302 320 Q340 310, 370 318"
-            stroke="#0066FF"
+            stroke="#43baee"
             strokeWidth="1"
             opacity="0.035"
             strokeLinecap="round"
           />
           <path
             d="M300 360 Q330 352, 355 358"
-            stroke="#0066FF"
+            stroke="#43baee"
             strokeWidth="1"
             opacity="0.03"
             strokeLinecap="round"
@@ -112,28 +112,28 @@ export default function SpineArt({ className = "" }: Props) {
           {/* Rib curves - left (mirror) */}
           <path
             d="M292 240 Q240 228, 200 238"
-            stroke="#0066FF"
+            stroke="#43baee"
             strokeWidth="1"
             opacity="0.04"
             strokeLinecap="round"
           />
           <path
             d="M295 280 Q250 268, 215 278"
-            stroke="#0066FF"
+            stroke="#43baee"
             strokeWidth="1"
             opacity="0.04"
             strokeLinecap="round"
           />
           <path
             d="M298 320 Q260 310, 230 318"
-            stroke="#0066FF"
+            stroke="#43baee"
             strokeWidth="1"
             opacity="0.035"
             strokeLinecap="round"
           />
           <path
             d="M300 360 Q270 352, 245 358"
-            stroke="#0066FF"
+            stroke="#43baee"
             strokeWidth="1"
             opacity="0.03"
             strokeLinecap="round"
@@ -141,7 +141,7 @@ export default function SpineArt({ className = "" }: Props) {
           {/* Hip line */}
           <path
             d="M220 560 Q260 545, 300 555 Q340 545, 380 560"
-            stroke="#0066FF"
+            stroke="#43baee"
             strokeWidth="1.5"
             opacity="0.05"
             strokeLinecap="round"
@@ -156,14 +156,14 @@ export default function SpineArt({ className = "" }: Props) {
           {/* Arms */}
           <path
             d="M180 200 Q155 260, 140 330"
-            stroke="#0066FF"
+            stroke="#43baee"
             strokeWidth="1"
             opacity="0.04"
             strokeLinecap="round"
           />
           <path
             d="M420 200 Q445 260, 460 330"
-            stroke="#0066FF"
+            stroke="#43baee"
             strokeWidth="1"
             opacity="0.04"
             strokeLinecap="round"
@@ -171,14 +171,14 @@ export default function SpineArt({ className = "" }: Props) {
           {/* Legs */}
           <path
             d="M220 560 Q210 640, 200 740"
-            stroke="#0066FF"
+            stroke="#43baee"
             strokeWidth="1"
             opacity="0.04"
             strokeLinecap="round"
           />
           <path
             d="M380 560 Q390 640, 400 740"
-            stroke="#0066FF"
+            stroke="#43baee"
             strokeWidth="1"
             opacity="0.04"
             strokeLinecap="round"
@@ -200,7 +200,7 @@ export default function SpineArt({ className = "" }: Props) {
               cx={joint.cx}
               cy={joint.cy}
               r={joint.r}
-              fill="#0066FF"
+              fill="#43baee"
               opacity="0.03"
             />
           ))}
@@ -218,7 +218,7 @@ export default function SpineArt({ className = "" }: Props) {
               cx={point.cx}
               cy={point.cy}
               r={3}
-              fill="#0066FF"
+              fill="#43baee"
               opacity="0.15"
             />
           ))}
@@ -239,7 +239,7 @@ export default function SpineArt({ className = "" }: Props) {
               cx={dot.cx}
               cy={dot.cy}
               r={dot.r}
-              fill="#0066FF"
+              fill="#43baee"
               opacity="0.08"
             />
           ))}

@@ -3,13 +3,13 @@ import ServiceWorkerRegistrar from "@/components/ServiceWorkerRegistrar";
 import "./globals.css";
 
 export const viewport: Viewport = {
-  themeColor: "#0066FF",
+  themeColor: "#43baee",
   width: "device-width",
   initialScale: 1,
 };
 
 export const metadata: Metadata = {
-  title: "HealEazy — Expert Physiotherapy at Your Doorstep",
+  title: "Kyuro — Expert Physiotherapy at Your Doorstep",
   description:
     "Connect with verified physiotherapists who come to you. Personalized treatment packages, flexible scheduling, and professional care — all in the comfort of your home. Launching in Hyderabad.",
   keywords: [
@@ -18,21 +18,21 @@ export const metadata: Metadata = {
     "physiotherapist",
     "Hyderabad",
     "rehabilitation",
-    "HealEazy",
+    "Kyuro",
   ],
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "HealEazy",
+    title: "Kyuro",
   },
   openGraph: {
-    title: "HealEazy — Expert Physiotherapy at Your Doorstep",
+    title: "Kyuro — Expert Physiotherapy at Your Doorstep",
     description:
       "Connect with verified physiotherapists who come to you. Launching in Hyderabad.",
     type: "website",
     locale: "en_IN",
-    siteName: "HealEazy",
+    siteName: "Kyuro",
   },
 };
 
