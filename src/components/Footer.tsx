@@ -1,10 +1,12 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="py-10 sm:py-14 bg-[#FCFCFC] border-t border-border/40">
       <div className="mx-auto max-w-5xl px-5 sm:px-8">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-5">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-5 sm:gap-6">
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2">
             <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center">
               <span className="text-white font-extrabold text-[7px] leading-none">
                 K
@@ -13,29 +15,47 @@ export default function Footer() {
             <span className="font-bold text-sm tracking-tight text-text">
               Kyuro
             </span>
-          </div>
+          </Link>
 
           {/* Links */}
-          <div className="flex items-center gap-6 text-[11px] text-text-muted">
-            <a
-              href="#process"
+          <nav
+            aria-label="Footer"
+            className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] text-text-muted"
+          >
+            <Link
+              href="/#process"
               className="hover:text-text transition-colors"
             >
               Process
-            </a>
-            <a
-              href="#features"
+            </Link>
+            <Link
+              href="/#features"
               className="hover:text-text transition-colors"
             >
               Features
-            </a>
-            <a
-              href="#signup"
+            </Link>
+            <Link
+              href="/#signup"
               className="hover:text-text transition-colors"
             >
               Waitlist
-            </a>
-          </div>
+            </Link>
+            <span className="text-border/80" aria-hidden="true">
+              |
+            </span>
+            <Link
+              href="/privacy"
+              className="hover:text-text transition-colors"
+            >
+              Privacy
+            </Link>
+            <Link
+              href="/terms"
+              className="hover:text-text transition-colors"
+            >
+              Terms
+            </Link>
+          </nav>
 
           {/* Right */}
           <div className="text-[11px] text-text-muted text-center sm:text-right flex items-center gap-1.5">
